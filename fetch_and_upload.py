@@ -28,7 +28,7 @@ def fetch_crypto_prices():
 def upload_to_bigquery(df):
     client = bigquery.Client()
 
-    table_id = "<YOUR_PROJECT>.<YOUR_DATASET>.crypto_prices"
+    table_id = "marine-tensor-478919-r2.crypto_data.crypto_prices"
 
     job = client.load_table_from_dataframe(df, table_id)
     job.result()
